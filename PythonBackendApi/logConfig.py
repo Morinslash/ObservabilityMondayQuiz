@@ -1,16 +1,18 @@
 import logging
+from pythonjsonlogger import jsonlogger
 
 LOGGING_CONFIG = {
     'version': 1,
     'formatters': {
-        'default': {
-            'format': '[%(asctime)s] [%(correlation_id)s] %(levelname)s in %(module)s: %(message)s',
+        'json': {
+            '()': jsonlogger.JsonFormatter,
+            'format': '%(asctime)s %(levelname)s %(name)s %(message)s %(correlation_id)s'
         }
     },
     'handlers': {
         'console': {
             'class': 'logging.StreamHandler',
-            'formatter': 'default',
+            'formatter': 'json',
             'level': 'DEBUG',
         }
     },
