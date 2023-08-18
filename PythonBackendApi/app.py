@@ -1,14 +1,25 @@
 import logging.config
-from flask import Flask
+import uuid
+from flask import Flask, g
+
+from ContextLogger import ContextLogger
 from greeter import Greeter
 from logConfig import LOGGING_CONFIG
+
+# Register the custom logger class
+logging.setLoggerClass(ContextLogger)
 
 logging.config.dictConfig(LOGGING_CONFIG)
 logger = logging.getLogger('my_flask_app')
 
 app = Flask(__name__)
 greeter = Greeter()
-
+@app.before_request
+def before_request():
+    correlation_id = str(uuid.uuid4())
+    g.correlation_id = correlation_id
+    logger.set_correlation_id(correlation_id)
+    logger.info("Received new request")
 
 @app.route('/')
 def hello_world():
