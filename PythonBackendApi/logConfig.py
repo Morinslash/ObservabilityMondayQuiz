@@ -14,6 +14,13 @@ LOGGING_CONFIG = {
             'level': 'DEBUG',
         }
     },
+    'loggers': {
+        'my_flask_app': {
+            'level': 'DEBUG',
+            'handlers': ['console'],
+            'propagate': False,
+        }
+    },
     'root': {
         'level': 'DEBUG',
         'handlers': ['console'],
