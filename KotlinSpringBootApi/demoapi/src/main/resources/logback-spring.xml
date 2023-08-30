@@ -22,10 +22,11 @@
                     <fieldName>thread</fieldName>
                 </threadName>
                 <mdc/>
-                <context>
-                    <fieldName>application</fieldName>
-                    <fieldValue>MyAppName</fieldValue>
-                </context>
+                <pattern>
+                    <pattern>
+                        {"application": "MyAppName"}
+                    </pattern>
+                </pattern>
             </providers>
         </encoder>
     </appender>

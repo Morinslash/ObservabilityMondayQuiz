@@ -1,0 +1,9 @@
+### Test POST request to submit a quiz
+POST http://localhost:8080/api/quiz
+Content-Type: application/json
+X-Correlation-ID: 123-123-123
+
+{
+  "question": 3,
+  "response": "Tuesday"
+}
