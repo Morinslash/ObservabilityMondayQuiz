@@ -12,16 +12,16 @@
                 <logLevel>
                     <fieldName>level</fieldName>
                 </logLevel>
+                <threadName>
+                    <fieldName>thread</fieldName>
+                </threadName>
+                <mdc/>
                 <message>
                     <fieldName>message</fieldName>
                 </message>
                 <loggerName>
                     <fieldName>logger</fieldName>
                 </loggerName>
-                <threadName>
-                    <fieldName>thread</fieldName>
-                </threadName>
-                <mdc/>
                 <pattern>
                     <pattern>
                         {"application": "MyAppName"}

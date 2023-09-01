@@ -1,6 +1,5 @@
-package com.example.demoapi.config
+package com.example.demoapi.interceptors
 
-import com.example.demoapi.interceptors.CorrelationInterceptor
 import org.springframework.stereotype.Component
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer

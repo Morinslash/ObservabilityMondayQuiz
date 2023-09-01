@@ -50,6 +50,11 @@
 			<artifactId>logstash-logback-encoder</artifactId>
 			<version>7.4</version> <!-- Use the appropriate version -->
 		</dependency>
+		<dependency>
+			<groupId>com.azure</groupId>
+			<artifactId>azure-storage-queue</artifactId>
+			<version>12.18.1</version>
+		</dependency>
 	</dependencies>
 
 	<build>

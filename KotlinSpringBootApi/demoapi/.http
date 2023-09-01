@@ -7,3 +7,6 @@ X-Correlation-ID: 123-123-123
   "question": 3,
   "response": "Tuesday"
 }
+
+### Test GET
+GET http://localhost:8080/api/hello
